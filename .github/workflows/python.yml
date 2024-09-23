@@ -15,7 +15,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
       max-parallel: 3
@@ -33,7 +33,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python.version }}
-      uses: actions/setup-python@v2
+      uses: MatteoH2O1999/setup-python@v4
       with:
         python-version: ${{ matrix.python.version }}
 
